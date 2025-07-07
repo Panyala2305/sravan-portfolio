@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.app-background {
+  min-height: 100vh;
+  background: linear-gradient(to bottom,  #1e2a38, #000000); /* blue to black */
+  color: white;
+}
