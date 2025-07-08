@@ -1,13 +1,21 @@
 export default function FamiliarTechnologies() {
   const techLogos = [
-    "/reactjs.svg",
-    "/nodejs.svg",
-    "/mongodb.svg",
+    
     "/docker.svg",
-    "/mysql.svg",
+    "/sql.svg",
     "/aws.png",
     "/azure.svg",
-    
+    "/gcp.svg",
+    "/python.png",
+    "/pyspark.png",
+    "/tensorflow.svg",
+    "/pytorch.png",
+    "/kubernetes.svg",
+    "/powebi1.png",
+    "/tableau1.png",
+    "/excel.svg",
+    "/rust.svg",
+    "/gitlab.svg",
     // add more paths as needed
   ];
 
