@@ -63,13 +63,22 @@ export default function Navbar() {
               >
                 Experience
               </ScrollLink>
+              
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="text-white hover:underline cursor-pointer"
+              >
+                Projects
+              </ScrollLink>
+
             </>
           )}
 
           <a
-            href="https://www.linkedin.com/in/sravan77/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:sravansaimethuku45@gmail.com"
             className="bg-black text-white px-4 py-2 rounded-xl hover:bg-indigo-500 transition"
           >
             Contact Me

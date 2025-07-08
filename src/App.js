@@ -6,6 +6,7 @@ import FamiliarTechnologies from './components/FamiliarTechnologies';
 import Education from './components/Education';
 import LetsConnect from './components/Connect';
 import About from './pages/About'; 
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -20,8 +21,10 @@ function App() {
                 <Hero />
                 <FamiliarTechnologies />
                 <WorkExperience />
+                <Projects/>
                 <Education />
                 <LetsConnect />
+                
               </>
             }
           />
