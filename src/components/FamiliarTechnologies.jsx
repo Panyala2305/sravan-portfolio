@@ -16,10 +16,10 @@ export default function FamiliarTechnologies() {
     "/excel.svg",
     "/rust.svg",
     "/gitlab.svg",
-    // add more paths as needed
+    
   ];
 
-  // Duplicate the array to create an infinite loop illusion
+ 
   const logos = [...techLogos, ...techLogos];
 
   return (

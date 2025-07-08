@@ -1,21 +1,71 @@
-import { FaHome } from "react-icons/fa"; // Make sure to install react-icons if not already
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { FaHome } from "react-icons/fa";
 
 export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    if (location.pathname === '/') {
+      
+      scroll.scrollToTop({
+        duration: 500,
+        smooth: true,
+      });
+    } else {
+      
+      navigate('/');
+    }
+  };
+
   return (
     <header className="fixed w-full top-0 left-0 bg-[#1e2a38] shadow z-50">
       <div className="container mx-auto flex justify-between items-center p-4 px-4">
-        {/* Home Icon + Text */}
-        <a href="#" className="flex items-center space-x-2 text-white ">
+        
+        <div
+          onClick={handleHomeClick}
+          className="flex items-center space-x-2 text-white cursor-pointer hover:text-gray-300 transition"
+        >
           <FaHome className="text-white text-xl" />
           <span className="text-xl font-bold">Home</span>
-        </a>
+        </div>
 
-        {/* Navigation Links */}
+        
         <nav className="space-x-4 hidden md:block">
-          <a href="#about" className="text-white hover:underline">About</a>
-          <a href="#education" className="text-white hover:underline">Education</a>
-          <a href="#projects" className="text-white hover:underline">Projects</a>
-          <a href="#experience" className="text-white hover:underline">Experience</a>
+          <RouterLink
+            to="/about"
+            className={`text-white hover:underline transition ${
+              location.pathname === '/about' ? 'underline text-indigo-400' : ''
+            }`}
+          >
+            About
+          </RouterLink>
+
+          {location.pathname === '/' && (
+            <>
+              <ScrollLink
+                to="education"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="text-white hover:underline cursor-pointer"
+              >
+                Education
+              </ScrollLink>
+
+              <ScrollLink
+                to="experience"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="text-white hover:underline cursor-pointer"
+              >
+                Experience
+              </ScrollLink>
+            </>
+          )}
+
           <a
             href="https://www.linkedin.com/in/sravan77/"
             target="_blank"
@@ -27,5 +77,5 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
