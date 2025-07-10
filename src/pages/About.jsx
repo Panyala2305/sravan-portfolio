@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -83,6 +83,10 @@ export default function About() {
           >
             <FaEnvelope />
           </a>
+          <div className="flex items-center space-x-2 text-white text-xl">
+                    <FaPhone />
+                    <span className="font-medium">314-312-1223</span>
+                  </div>
         </div>
       </div>
     </section>

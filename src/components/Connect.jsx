@@ -1,6 +1,6 @@
 // LetsConnect.jsx
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const LetsConnect = () => {
   return (
@@ -29,6 +29,10 @@ const LetsConnect = () => {
         >
           <FaEnvelope />
         </a>
+        <div className="flex items-center space-x-2 text-white text-xl">
+          <FaPhone />
+          <span className="font-medium">314-312-1223</span>
+        </div>
       </div>
       <div className="max-w-3xl py-6 text-md text-center sm:text-lg leading-relaxed">
         <p className="mb-2 font-semibold">Let's Build Something Amazing Together!</p>
